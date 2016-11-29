@@ -23,4 +23,10 @@ describe( "Water Bottle", function() {
     waterBottle.empty();
     assert.equal( 0, waterBottle.volume );
   });
+
+  it( "should not go below 0 when drunk", function() {
+    waterBottle.drink();
+    waterBottle.drink();
+    assert.equal( 0, waterBottle.volume );
+  })
 });

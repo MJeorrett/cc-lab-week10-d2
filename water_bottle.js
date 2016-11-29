@@ -5,6 +5,7 @@ var watterBottle = {
   },
   drink: function() {
     this.volume -= 10;
+    if(this.volume < 0) this.volume = 0;
   },
   empty: function() {
     this.volume = 0;
